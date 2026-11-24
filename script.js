@@ -19,11 +19,9 @@ events.forEach((e) => {
   list.appendChild(li);
 });
 
-// ----- Logo: show the approved file if present, otherwise the text wordmark -----
+// ----- Logo -----
 const logo = document.getElementById('logo');
-const brandText = document.getElementById('brand-text');
-logo.addEventListener('error', () => { logo.style.display = 'none'; });
-logo.addEventListener('load', () => { brandText.style.display = 'none'; });
+if (logo) logo.addEventListener('error', () => { logo.style.display = 'none'; });
 
 // ----- Mobile menu -----
 const toggle = document.getElementById('nav-toggle');
