@@ -1,6 +1,6 @@
 # World Merit Oujda Council
 
-Static website for the Oujda chapter of World Merit. Built with plain HTML, CSS and JavaScript — no build step.
+Static website for the World Merit Oujda Council. Built with plain HTML, CSS and JavaScript — no build step.
 
 ## Files
 
