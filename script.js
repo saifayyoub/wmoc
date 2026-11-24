@@ -36,8 +36,13 @@ nav.querySelectorAll('a').forEach((a) =>
   a.addEventListener('click', () => {
     nav.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    const details = a.closest('.nav-more');
+    if (details) details.open = false;
   })
 );
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-more')) document.querySelector('.nav-more').open = false;
+});
 
 // ----- Highlight the current section in the nav -----
 const links = [...nav.querySelectorAll('a[href^="#"]:not(.btn)')];
