@@ -97,6 +97,10 @@ p { margin: 0 0 14px; }
 .c-orange { background: var(--orange); }
 .c-blue { background: var(--blue); }
 .c-green { background: var(--green); }
+.c-purple { background: var(--purple); }
+.c-amber { background: var(--amber); }
+.c-teal { background: var(--teal); }
+.card-num { display: block; font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; color: var(--orange-text); margin-bottom: 6px; }
 .card-link { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--orange-text); }
 .source { margin-top: 28px; font-size: 13px; color: var(--muted); }
 .source a { text-decoration: underline; }
