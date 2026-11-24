@@ -108,8 +108,9 @@ p { margin: 0 0 14px; }
 .split { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
 .split > div { flex: 1 1 420px; min-width: 0; }
 .split p { font-size: 17px; color: var(--ink-soft); }
-.values { flex: 1 1 380px; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.values { flex: 1 1 380px; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
 .values li { background: var(--cream); border-radius: 16px; padding: 18px 22px; font-size: 16px; }
+.values-title { margin: 48px 0 20px; }
 
 /* Events */
 .events { list-style: none; padding: 0; margin: 32px 0 0; border-top: 2px solid var(--navy); }
