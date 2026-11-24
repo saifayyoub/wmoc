@@ -21,11 +21,11 @@ Then open http://localhost:8000.
 
 ## Edit content
 
-- **Club facts, vision, contact details:** `index.html`
+- **Council facts, vision, contact details:** `index.html`
 - **Events:** the `events` array at the top of `script.js`
 - **Join form:** submits to FormSubmit.co, which emails applications to `worldmeritoujda@gmail.com`. On first use, check that inbox and click the confirmation link FormSubmit sends; then submit a test to verify delivery. The visitor is redirected to `thanks.html`.
 
-The club principles follow the official World Merit wording: inclusivity, member-driven, collaborative, plus the council promise to learn, act, connect and grow. Sources: https://worldmerit.org/about-world-merit and https://worldmerit.org/programmes/councils
+The council principles follow the official World Merit wording: inclusivity, member-driven, collaborative, plus the council promise to learn, act, connect and grow. Sources: https://worldmerit.org/about-world-merit and https://worldmerit.org/programmes/councils
 
 ## Deploy to Vercel
 
