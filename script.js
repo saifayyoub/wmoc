@@ -1,8 +1,7 @@
 // ----- Edit your events here -----
 const events = [
-  { date: '[DATE]', title: '[Event title]', meta: '[Venue, Oujda · short description]' },
-  { date: '[DATE]', title: '[Event title]', meta: '[Venue, Oujda · short description]' },
-  { date: '[DATE]', title: '[Event title]', meta: '[Venue, Oujda · short description]' }
+  { date: 'Date to be announced', title: 'Art & Environment Workshop', meta: 'Oujda · Paint something inspired by protecting our environment' },
+  { date: 'Date to be announced', title: 'Environmental Volunteering Day', meta: 'Oujda · Join hands-on volunteering for a cleaner city' }
 ];
 
 // ----- Render events -----
