@@ -310,7 +310,12 @@
         <h2>Your merit belongs in the room</h2>
         <p class="lead light">Join the Oujda Council to learn by doing, meet driven people and put your ideas to work for your city.</p>
       </div>
-      <form class="form" id="join-form" novalidate>
+      <form class="form" id="join-form" action="https://formsubmit.co/worldmeritoujda@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New application - World Merit Oujda Council">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" id="next-url" name="_next" value="">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
         <label for="name">Full name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
         <p class="error" id="err-name" role="alert"></p>

@@ -65,22 +65,30 @@ const status = document.getElementById('form-status');
 const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
 form.addEventListener('submit', (ev) => {
-  ev.preventDefault();
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  document.getElementById('err-name').textContent = name ? '' : 'Please enter your name.';
-  document.getElementById('err-email').textContent = emailOk(email) ? '' : 'Please enter a valid email address.';
+  const name = form.elements.namedItem('name').value.trim();
+  const email = form.elements.namedItem('email').value.trim();
+  const nameError = document.getElementById('err-name');
+  const emailError = document.getElementById('err-email');
+  nameError.textContent = name ? '' : 'Please enter your name.';
+  emailError.textContent = emailOk(email) ? '' : 'Please enter a valid email address.';
   status.className = 'form-status';
+
   if (!name || !emailOk(email)) {
-    status.textContent = '';
+    ev.preventDefault();
+    status.textContent = 'Please check the fields above.';
     return;
   }
 
-  // TODO: connect this to your backend, Google Form or email service.
-  // Example: fetch('https://your-endpoint', { method: 'POST', body: new FormData(form) })
+  const nextUrl = document.getElementById('next-url');
+  if (nextUrl) nextUrl.value = new URL('thanks.html', location.href).href;
+
+  const button = form.querySelector('button[type="submit"]');
+  if (button) {
+    button.disabled = true;
+    button.textContent = 'Sending…';
+  }
   status.classList.add('ok');
-  status.textContent = 'Thank you, ' + name.split(' ')[0] + '. We will contact you soon.';
-  form.reset();
+  status.textContent = 'Sending your application…';
 });
 
 // ----- Footer year -----
