@@ -77,6 +77,9 @@ form.addEventListener('submit', (ev) => {
     return;
   }
 
+  const formUrl = document.getElementById('form-url');
+  if (formUrl) formUrl.value = location.href;
+
   const nextUrl = document.getElementById('next-url');
   if (nextUrl) nextUrl.value = new URL('thanks.html', location.href).href;
 
